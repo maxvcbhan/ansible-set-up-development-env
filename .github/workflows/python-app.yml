@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run Ansible playbook
-      uses: dawidd6/action-ansible-playbook@v2.6.1
+    - name: Clone ansible repo
+      uses: actions/checkout@2
+
+    - name: Run ansible playbook
+      uses: ministryofjustice/ansible-playbook-with-keyvault-action@v1.0
 
